@@ -9,8 +9,8 @@ const server = createServer(c => {
     c.on('end', () => {
         console.log('client disconnected');
     });
-    c.write('hello\r\n');
     c.on('data', (data) => {
+        // TODO: Receive Init message to differentiate each client
         let msg: GeoMessage = GeoMessageSchema.decode(data);
         console.log(JSON.stringify(msg));
         // TODO: Store geo message
