@@ -1,0 +1,21 @@
+{
+  "name": "redrones",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "watch:build": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run:server": "node dist/server.js",
+    "start": "npm-run-all build run:server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "schemapack": "^1.4.2"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}
